@@ -1,0 +1,73 @@
+body {
+    overflow-x: hidden;
+    background: #f8f9fa;
+}
+.auth-container {
+    min-height: 100vh;
+}
+.right-image {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.form-control {
+    height: 75px;
+}
+.COLOR{
+    background-color: #69B04A !important;
+}
+@media (max-width:767.98px){
+
+    .image-side{
+        display:none;
+    }
+
+    .form-side{
+        width:100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+.outlined-input {
+    position: relative;
+}
+
+.outlined-input input {
+    height: 4rem;
+    outline: 1px solid #69B04B
+}
+
+.outlined-input label {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #595C5F;
+    text-align: center;
+    transition: .2s ;
+    font-size: 1.2rem;
+    pointer-events: none;
+    padding: 0 5px;
+}
+
+.outlined-input input:not(:placeholder-shown) ~ label,
+.outlined-input input:focus ~ label {
+    top: 0px;
+    left: 10px;
+    font-size: 1rem;
+}
+
+/* .outlined-input input:hover {
+    outline: 1px solid blue;
+} */
+.outlined-input input:focus ~ label {
+     background-color: white;
+}

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau de bord</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="app-header py-3 d-none d-lg-flex">
+    <div class="container-fluid px-4">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <div class="brand-mark" aria-label="Logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80" height="80"
+              viewBox="0 0 158.8 158.8">
+              <path
+                d="m107.2 160.8 1.6-4.7c1.4-3.3 4.4-6.4 7.4-7.9 1.5-.7 2-.8 4.2-.8 3.1 0 4.4.5 6.7 2.7l1.6 1.5h3.3c3.3 0 3.4 0 5.1-.9 6.6-3.3 8.6-11.5 4.5-18.4-1-1.6-4.4-5.1-4.2-4.2l.9 2.9c.5 2 .6 2.7.6 5-.2 4.5-1.5 6.3-4.5 6.3q-3.7.1-4.2-4.3-.5-4.1-3.6-4-1.7 0-3.4 3.1-.6 1.4-1.8 2.1c-1 .7-1.3.8-3.1.8s-2.2-.1-3.2-.8a5 5 0 0 1-2.1-4.1c0-1.3.2-1.8 1-3.2 1.3-2.2 1.4-2.8 1-4q-.3-2-4.4-3.4c-2.2-.8-4.5-2-4.5-2.4l1-.4q1.8-.3 3.3-1.6c.7-.5 1-.6 6.6-.8 8.5-.2 13 .4 17.6 2.5a23 23 0 0 1 11.8 12.5c.7 2 1 6.8.5 9-.4 2-1.8 4.8-3.2 6.5s-4 3.6-6.3 4.5-6 1.1-8.3.6l-1.6-.3-1.1 1a16 16 0 0 1-6 3.6c-1 .2-4 .7-6.7 1zm-25.5-5.4a32 32 0 0 1-11-18c-.8-3-1-9.7-.6-13 .7-5.2 2.8-11.6 5.4-16.3 1.4-2.6 1.7-3 2.6-3q2.3 0 4.4-2 1.3-1.2 1.4-1.5l-2.5.5c-4.2 1.2-6.6.6-9.8-2.7-1-1-1.7-2-1.7-2.1 0-.5 2-1.9 3.5-2.3q3-1 6.5.6c2.3 1 3.6 1.2 5.1.8q2.3-.3-.4-1.1c-3-1.1-5-4-5-7.1s1.7-6.1 4.3-7.8c.9-.5 3.2-1.3 3.2-1l-1 1.9c-1 2-1.5 4.4-1.3 5.7.3 1.2 1.3 3 2 3.3s1 .2 2.7-.3c2.6-.9 6-1 8.1-.2.8.3 1.8.5 2.1.5 1.6 0 4.4-2.4 5-4.4.4-1.2.4-3.4.1-5q-.4-1.4.3-.8.6.3 1.3 1.5c3 4.6 1.6 10.2-3 12.5l-1.2.6a35 35 0 0 0 2.8 4.6V96l1.3-.6c1.9-1 5-1 6.8 0q1.3.7 1.8 1.3c.5.5.5.6.1 1.1a16 16 0 0 1-4.1 4c-1 .5-1.6.6-3.5.6h-2.2l.4 2c.7 2.6.7 2.6-.3 1.7s-1.4-1.6-2.7-5.4c-1.8-5.3-3.3-7.6-5.3-8.5-1.8-.8-7.3-.6-8.7.3-.4.3-.2.5 3.3 3 3 2 4 3.1 6.1 7.3 3 5.6 4.7 6.8 10 7 3.1.2 3.6.4 3.7 1.7q.2 2.9-.7 4.7c-1 2.2-2.5 2.8-7.3 3.2-7.4.7-14.6-1.4-18.6-5.4-1.4-1.5-1.8-1.7-2.4-1.5q-.7 0-.7.4c0 .6 2 3 3.3 4.4l1.5 1.4-1.3 1.5a28 28 0 0 0-6.4 25c.7 2.5 2.7 6.9 4.2 8.8 1 1.2 1 1.4.6 2q-.3.4-.6.5zm25.6-40.7q.5-.8-.9-1-1.2-.1-1.3-1.1-.2-1.1-1-.8c-.4.4-.5 1.4 0 2.1.5 1 2.4 1.5 3.2.8m-19 38.8c-5-2.6-6.5-13.5-3.1-22l2-4c1.2-2 4.3-5.5 5.2-6 .3-.1 6.5.4 6.7.6l.5 1.7q.5 2 4.2 8.6c2.3 4.3 2.4 8.4 0 10.7-1.2 1.4-2.3 1.7-5 1.8q-3.2 0-3.8 1.3c-.2.4-.5 1.7-.7 3-.3 3-.8 3.7-2.3 4.4s-2.2.6-3.6-.1"
+                style="fill:#67BA44;stroke-width:.264583" transform="translate(-29.1 -40.9)" />
+            </svg>
+          </div>
+        </div>
+        <div class="col-6 text-center">
+          <h1 class="welcome-title mb-0">Bienvenue, Mallam!</h1>
+        </div>
+        <div class="col-3">
+          <div class="d-flex justify-content-end align-items-center gap-4 header-actions">
+            <div class="ico-nav">
+              <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill caret"></i>
+                Paramètres
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <div class="ico-nav">
+              <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-fill caret"></i>
+                Compte
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="row  g-4 menu-grid mt-3">
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card active-menu text-decoration-none text-dark" href="index.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/dashboard.svg" alt="">
+              <strong>Tableau de bord</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card text-decoration-none text-dark" href="#">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/Carte de la ferme.svg" alt="">
+              <strong>Carte</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card text-decoration-none text-dark" href="cheptel.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/Cheptel.svg" alt="">
+              <strong>Cheptel</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card text-decoration-none text-dark" href="stockage.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/Cheptel.svg" alt="">
+              <strong>Stockage</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card text-decoration-none text-dark" href="suivi.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/Suivi du bétail.svg" alt="">
+              <strong>Suivi</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl">
+          <a class="card menu-card  text-decoration-none text-dark" href="tache.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <img src="Icons/Gestionnaire de Taches.svg" alt="">
+              <strong>Taches</strong>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl position-relative">
+          <a class="card menu-card text-decoration-none text-dark" href="noti.html">
+            <div class="card-body card-img d-flex flex-column align-items-center justify-content-center">
+              <span class="badge rounded-pill notification-badge">16</span>
+              <img src="Icons/Notifications.svg" alt="">
+              <strong>Notifications</strong>
+            </div>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="dashboard-layout">
+    <aside class="app-sidebar flex-column align-items-center app-header gap-4 menu-grid mt-3 p-3 d-flex d d-lg-none">
+      <div class="">
+        <a class="card menu-card active-menu text-decoration-none text-dark" href="index.html">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <img src="Icons/dashboard.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="">
+        <a class="card menu-card text-decoration-none text-dark" href="#">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <img src="Icons/Carte de la ferme.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="">
+        <a class="card menu-card text-decoration-none text-dark" href="cheptel.html">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <img src="Icons/Cheptel.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="">
+        <a class="card menu-card text-decoration-none text-dark" href="stockage.html">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <img src="Icons/Stockage.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="">
+        <a class="card menu-card text-decoration-none text-dark" href="suivi.html">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <img src="Icons/Suivi du bétail.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="">
+        <a class="card menu-card text-decoration-none text-dark" href="tache.html">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <img src="Icons/Gestionnaire de Taches.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class=" position-relative">
+        <a href="noti.html" class="card menu-card text-decoration-none text-dark" >
+          <div class="card-body d-flex flex-column align-items-center justify-content-center">
+            <span class="badge rounded-pill notification-badge">16</span>
+            <img src="Icons/Notifications.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="header-actions">
+        <div class="ico-nav card menu-card d-flex flex-column align-items-center justify-content-center">
+          <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-gear-fill caret"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="ico-nav card menu-card d-flex flex-column align-items-center justify-content-center mt-4">
+          <button class="btn btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-fill caret"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main class="app-main">
+      <div class="">
+        <section class="container" style="max-width: 1680px;">
+          <div class="d-flex align-items-center gap-3 mb-4 mt-3 page-title">
+            <img src="Icons/dashboard.svg" alt="">
+            <h2 class="mb-0">Tableau de bord</h2>
+          </div>
+          <div class="card dashboard-panel">
+            <div class="card-body p-3 p-lg-4">
+              <div class="row g-4 align-items-start">
+                <div class="col-12 col-xl-6">
+                  <div class="row g-4 ">
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Carte de la ferme.svg" alt="">
+                            <strong>27</strong>
+                          </div>
+                          <p class="mb-0">Nombre d'éléments sur carte</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Bovins.svg" alt="">
+                            <strong>11</strong>
+                          </div>
+                          <p class="mb-0">Nombre de bovins</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Ovins.svg" alt="">
+                            <strong>19</strong>
+                          </div>
+                          <p class="mb-0">Nombre d'ovins</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="row g-4 mt-3">
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Stockage.svg" alt="">
+                            <strong>7</strong>
+                          </div>
+                          <p class="mb-0">Nombre d'éléments stoker</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Suivi du bétail.svg" alt="">
+                            <strong>4</strong>
+                          </div>
+                          <p class="mb-0">Nombre de tag RFID configuré</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Gestionnaire de Taches.svg" alt="">
+                            <strong>7</strong>
+                          </div>
+                          <p class="mb-0">Nombre de<br>tache à<br>effectuer</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <article class="card stat-card h-100">
+                        <div
+                          class="card-body d-flex flex-column align-items-center justify-content-between text-center">
+                          <div class="d-flex align-items-start justify-content-center stat-number">
+                            <img src="Icons/Notifications.svg" alt="">
+                            <strong>16</strong>
+                          </div>
+                          <p class="mb-0">Nombre de<br>notifications</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-xl-6">
+                  <div class="map-stack">
+                    <div class="coordinates text-center">
+                      Coordonnées: 13.52288327201849, 2.1068183168653607
+                    </div>
+                    <div class="map-view">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3852.4137514162576!2d2.104282492005056!3d13.522738241196459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d07545f52101fd%3A0xcbc9a31e9e9ff468!2sESCEP(%20%C3%89cole%20sup%C3%A9rieure%20des%20Communications%20%C3%89lectroniques%20et%20de%20la%20Poste!5e0!3m2!1sfr!2sne!4v1779378946401!5m2!1sfr!2sne"
+                        class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container-fluid dashboard-shell p-3 mt-5">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body">
+                  <h1 class="card-title fs-4 fw-normal mb-4">Liste des marqueurs configuré pour la carte</h1>
+
+                  <div class="marker-grid">
+                    <button class="btn icon-pill" aria-label="Vache">
+                      <img src="Icons/Vache.svg" alt="">
+                    </button>
+                    <button class="btn icon-pill" aria-label="Taureau">
+                      <img src="Icons/Taureau.svg" alt="">
+                    </button>
+                    <button class="btn icon-pill" aria-label="Bélier">
+                      <img src="Icons/Béliers.svg" alt="">
+                    </button>
+                    <button class="btn icon-pill" aria-label="Brebis">
+                      <img src="Icons/Brebis.svg" alt="">
+                    </button>
+                    <button class="btn icon-pill small-pill" aria-label="Voiture">
+                      <i class="bi bi-car-front-fill"></i>
+                    </button>
+                    <button class="btn icon-pill small-pill" aria-label="Base de données">
+                      <i class="bi bi-database-fill"></i>
+                    </button>
+                    <button class="btn icon-pill small-pill" aria-label="Colis">
+                      <i class="bi bi-box-seam"></i>
+                    </button>
+                    <button class="btn icon-pill small-pill" aria-label="Wi-Fi">
+                      <i class="bi bi-wifi"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <div class="livestock-list">
+                    <div class="d-flex align-items-center gap-4">
+                      <img src="Icons/Taureau.svg" alt="">
+                      <p class="fs-2 mb-0">Taureaux: 6</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                      <img src="Icons/Vache.svg" alt="">
+                      <p class="fs-2 mb-0">Vaches: 8</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                      <img src="Icons/Béliers.svg" alt="">
+                      <p class="fs-2 mb-0">Béliers: 11</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                      <img src="Icons/Béliers.svg" alt="">
+                      <p class="fs-2 mb-0">Brebis: 8</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body">
+                  <div class="status-table">
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Status</div>
+                      <div class="col text-end">Status</div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Condition</div>
+                      <div class="col text-end">Condition</div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Power</div>
+                      <div class="col text-end">Power</div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Door</div>
+                      <div class="col text-end">Door</div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Temperature</div>
+                      <div class="col text-end">Temperature</div>
+                    </div>
+                    <div class="row align-items-center">
+                      <div class="col fw-bold">Humidity</div>
+                      <div class="col text-end">Humidity</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body">
+                  <h2 class="card-title fs-5 fw-normal mb-4">Listes des Tags RFID configuré</h2>
+                  <ul class="list-unstyled tag-list mb-0">
+                    <li class="d-flex align-items-center gap-2 fs-2"><i class="bi bi-tags-fill text-success"></i>TAG_1:
+                      3
+                    </li>
+                    <li class="d-flex align-items-center gap-2 fs-2"><i class="bi bi-tags-fill text-success"></i>TAG_2:
+                      5
+                    </li>
+                    <li class="d-flex align-items-center gap-2 fs-2"><i class="bi bi-tags-fill text-success"></i>TAG_3:
+                      11
+                    </li>
+                    <li class="d-flex align-items-center gap-2 fs-2"><i class="bi bi-tags-fill text-success"></i>TAG_5:
+                      4
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body d-flex flex-column justify-content-start gap-5 pt-4">
+                  <div class="d-flex align-items-center gap-3 task-row">
+                    <i class="bi bi-clipboard-check-fill text-warning"></i>
+                    <p class="fs-2 mb-0">Nombre de taches à faire: 7</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 task-row">
+                    <i class="bi bi-clipboard-x-fill text-success"></i>
+                    <p class="fs-2 mb-0">Nombre de taches effectuer: 4</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card dashboard-card h-100">
+                <div class="card-body pt-4">
+                  <ul class="list-unstyled notification-list mb-0">
+                    <li class="d-flex align-items-center gap-3 fs-2">
+                      <i class="bi bi-check-circle-fill routine"></i>Notifications de routine: 6
+                    </li>
+                    <li class="d-flex align-items-center gap-3 fs-2">
+                      <i class="bi bi-question-circle-fill verification"></i>Notifications de
+                      vérification: 5
+                    </li>
+                    <li class="d-flex align-items-center gap-3 fs-2">
+                      <i class="bi bi-exclamation-circle-fill danger"></i>Notifications de danger: 3
+                    </li>
+                    <li class="d-flex align-items-center gap-3 fs-2">
+                      <i class="bi bi-exclamation-circle-fill critical"></i>Notifications critique: 2
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

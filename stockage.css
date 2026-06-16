@@ -1,0 +1,248 @@
+body {
+  min-height: 100vh;
+  color: #1f2327;
+  background: #d3d3d3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-header {
+  background: #eeeeee;
+  overflow-y:auto !important;
+}
+
+.brand-mark img{
+  width: 100px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  color: #7ab75f;
+  font-size: 2.6rem;
+}
+
+.welcome-title {
+  font-size: clamp(2rem, 3vw, 3.15rem);
+  font-weight: 400;
+}
+
+.header-actions .btn {
+  font-size: 1.2rem;
+}
+
+.header-actions .bi-gear-fill,
+.header-actions .bi-person-fill {
+  font-size: 2.4rem;
+  vertical-align: middle;
+}
+
+.caret {
+  font-size: .7rem;
+}
+
+.menu-card,
+.stat-card,
+.dashboard-panel {
+  max-width: 1680px !important;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, .22);
+}
+
+
+.menu-card strong {
+  margin-top: .55rem;
+  font-size: 1.08rem;
+}
+.card-body img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: var(--icon) center / contain no-repeat;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+body {
+  min-height: 100vh;
+  color: #25282c;
+  background: #d1d1d1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title h1 {
+  font-size: clamp(2rem, 2.6vw, 3rem);
+  font-weight: 400;
+}
+
+.storage-card,
+.status-card,
+.title-icon {
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .22);
+}
+
+.storage-card {
+  min-height: 410px;
+  background: #f2f2f2;
+}
+
+.storage-card .card-body {
+  padding: 2rem 2rem 1.6rem;
+}
+
+.storage-title {
+  margin-bottom: 1.7rem;
+  font-size:2rem;
+  font-weight: 400;
+}
+
+.camera-label,
+.update-text {
+  font-size: 1rem;
+  color: #555b60;
+}
+
+/* .camera-img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover !important;
+} */
+
+.type-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.status-card {
+  max-width: 270px;
+  margin-left: auto;
+  background: #fff;
+}
+
+.status-card .card-body {
+  padding: .65rem .7rem;
+  font-size: 1.04rem;
+  line-height: 1.52;
+}
+
+.status-card strong {
+  font-weight: 700;
+}
+
+.title-icon {
+  width: 88px;
+  height: 88px;
+  display: inline-block;
+  background: #fff;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.title-icon img{
+  width: 70px;
+  height: 70px;
+}
+
+
+@media (max-width: 1199.98px) {
+  .storage-card {
+    min-height: auto;
+  }
+
+  .status-card {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .storage-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .camera-img {
+    height: 190px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dashboard-layout{
+    display:flex;
+}
+
+.app-sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:110px;
+    height:100vh;
+}
+
+.app-main{
+    margin-left:45px;
+    width:calc(100% - 110px);
+    height:100vh;
+    
+}
+
+@media (max-width:768px){
+
+    .app-sidebar{
+        width:85px;
+        
+    }
+
+    .app-main{
+        margin-left:80px;
+        margin-bottom: 20px;
+         width:calc(100% - 70px);
+      
+    } 
+    .menu-card {
+     width: 65px !important;
+     height: 65px !important;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.dashboard-shell {
+  max-width: 660px;
+  
+}
+
+
+}
